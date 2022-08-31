@@ -113,12 +113,10 @@ define Device/xiaomi_redmi-ax5-jdcloud
 	SOC := ipq6018
 	BLOCKSIZE := 64k
 	KERNEL_SIZE := 6144k
-	DEVICE_VENDOR := Xiaomi
-	DEVICE_MODEL := Redmi Router AX5 JDCloud
+	DEVICE_TITLE := Xiaomi Redmi Router AX5 JDCloud
 	DEVICE_DTS_CONFIG := config@cp03-c1
 	IMAGES += factory.bin
-	IMAGE/factory.bin := append-kernel | pad-to 6144k |\
-			     append-rootfs | append-metadata
+	IMAGE/factory.bin := append-kernel | pad-to 6144k |	append-rootfs | append-metadata
 endef
 TARGET_DEVICES += xiaomi_redmi-ax5-jdcloud
 
