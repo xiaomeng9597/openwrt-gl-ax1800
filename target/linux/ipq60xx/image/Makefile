@@ -118,6 +118,7 @@ define Device/xiaomi_redmi-ax5-jdcloud
 	DEVICE_DTS_CONFIG := config@cp03-c1
 	IMAGES += factory.bin
 	IMAGE/factory.bin := append-kernel | pad-to 6144k |	append-rootfs | append-metadata
+	DEVICE_PACKAGES := kmod-usb3 kmod-usb-phy-msm
 endef
 TARGET_DEVICES += xiaomi_redmi-ax5-jdcloud
 
